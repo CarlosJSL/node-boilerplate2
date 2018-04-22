@@ -10,10 +10,7 @@ const loadModels = (sequelize) => {
 
 	fs.readdirSync(__dirname.replace('/config','/src'))
 		.map(file => path.join(__dirname.replace('/config','/src'), file))
-		.filter(path => fs.statSync(path).isDirectory() && !path.includes('node_modules') 
-														&& !path.includes('.git') 
-														&& !path.includes('config')
-														&& !path.includes('test')
+		.filter(path => fs.statSync(path).isDirectory() && !path.includes('test')
 		).forEach(folder => {
 			fs.readdirSync(folder)
 				.map(file => folder + '/' + file)
