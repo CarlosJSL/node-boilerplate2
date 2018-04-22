@@ -1,8 +1,9 @@
 import loadDatabase from '../config/datasource';
 const User =  loadDatabase().models.Users;
+const Book = loadDatabase().models.Books;
 
 exports.findAll = () => {
-	return  User.findAll({})
+	return  User.findAll({include: [{ model: Book }]})
 				.then(result => result)
 				.catch(err => err);
 };

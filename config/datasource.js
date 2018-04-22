@@ -42,7 +42,8 @@ export default  () => {
 		};
 
 		database.models =  loadModels(sequelize);
-		
+		database.models.Users.hasMany(database.models.Books,{foreignKey: 'user_id',constraints: false});
+
 		// relações
 		return database;
 	} else{
