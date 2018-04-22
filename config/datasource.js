@@ -5,7 +5,7 @@ import path  from 'path';
 
 let database = null;
 
-function loadModels (sequelize) {
+const loadModels = (sequelize) => {
 	let models = [];
 
 	fs.readdirSync(__dirname.replace('/config',''))
