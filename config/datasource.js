@@ -8,8 +8,8 @@ let database = null;
 const loadModels = (sequelize) => {
 	let models = [];
 
-	fs.readdirSync(__dirname.replace('/config',''))
-		.map(file => path.join(__dirname.replace('/config',''), file))
+	fs.readdirSync(__dirname.replace('/config','/src'))
+		.map(file => path.join(__dirname.replace('/config','/src'), file))
 		.filter(path => fs.statSync(path).isDirectory() && !path.includes('node_modules') 
 														&& !path.includes('.git') 
 														&& !path.includes('config')

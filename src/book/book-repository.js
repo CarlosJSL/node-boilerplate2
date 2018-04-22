@@ -1,4 +1,4 @@
-import loadDatabase from '../config/datasource';
+import loadDatabase from '../../config/datasource';
 const Book =  loadDatabase().models.Books;
 
 exports.findAll = () => {

@@ -37,8 +37,8 @@ export const onListening = (server) => {
 };
 
 export const loadAllRoutes = (app) => {
-	fs.readdirSync(__dirname)
-		.map(file => path.join(__dirname, file))
+	fs.readdirSync(__dirname+'/src')
+		.map(file => path.join(__dirname+'/src', file))
 		.filter(path => fs.statSync(path).isDirectory() && !path.includes('node_modules') 
 														&& !path.includes('.git') 
 														&& !path.includes('config')

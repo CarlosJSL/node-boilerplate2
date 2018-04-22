@@ -1,4 +1,4 @@
-import loadDatabase from '../config/datasource';
+import loadDatabase from '../../config/datasource';
 const User =  loadDatabase().models.Users;
 const Book = loadDatabase().models.Books;
 
