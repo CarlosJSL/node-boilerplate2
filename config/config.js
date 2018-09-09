@@ -1,13 +1,15 @@
 export default{
 	production:{
-		database: 'testNewBoilerplate',
-		username: 'admin',
+		database: '																																																																						',
+		username: 'postgres',
 		password: '123',
 		params: {
+			port: '5432',
+			host:'0.0.0.0',
 			dialect: 'postgres',
 			logging: false
 		},
-	},
+	},																															
 	development:{
 		database: 'testNewBoilerplate',
 		username: 'postgres',

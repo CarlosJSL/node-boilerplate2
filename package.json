@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "babel-node": "babel-node --presets=es2015",
-    "production": "NODE_ENV=production babel-node ./server.js",
-    "development": "NODE_ENV=development nodemon --exec npm run babel-node ./server.js",
+    "production": "babel-node ./server.js",
+    "development": "nodemon --exec npm run babel-node ./server.js",
     "mocha": "./node_modules/.bin/_mocha --compilers js:babel-register",
     "test": "NODE_ENV=development jest",
     "build": "./node_modules/.bin/webpack --colors --progress",

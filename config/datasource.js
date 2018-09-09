@@ -1,5 +1,4 @@
 import Sequelize from 'sequelize';
-import config from './config';
 import fs  from 'fs' ;
 import path  from 'path';
 
@@ -25,12 +24,7 @@ const loadModels = (sequelize) => {
 
 export default  () => {
 	if(!database){
-		const sequelize = new Sequelize(
-			config[process.env.NODE_ENV].database,
-			config[process.env.NODE_ENV].username,
-			config[process.env.NODE_ENV].password,
-			config[process.env.NODE_ENV].params
-		);
+		const sequelize = new Sequelize('postgres://postgres:123@db/testNewBoilerplate');
 
 		database = {
 			sequelize,
